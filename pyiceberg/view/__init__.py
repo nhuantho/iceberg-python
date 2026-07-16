@@ -24,6 +24,20 @@ from pyiceberg.typedef import Identifier
 from pyiceberg.view.metadata import SQLViewRepresentation, ViewHistoryEntry, ViewMetadata, ViewVersion
 
 
+class ViewProperties:
+    VERSION_HISTORY_SIZE = "version.history.num-entries"
+    VERSION_HISTORY_SIZE_DEFAULT = 10
+
+    METADATA_COMPRESSION = "write.metadata.compression-codec"
+    METADATA_COMPRESSION_DEFAULT = "gzip"
+
+    WRITE_METADATA_LOCATION = "write.metadata.path"
+    COMMENT = "comment"
+
+    REPLACE_DROP_DIALECT_ALLOWED = "replace.drop-dialect.allowed"
+    REPLACE_DROP_DIALECT_ALLOWED_DEFAULT = False
+
+
 class View:
     """An Iceberg view."""
 
